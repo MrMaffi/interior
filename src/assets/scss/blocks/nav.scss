@@ -1,0 +1,51 @@
+@use '../base-lib' as *;
+@use '../base/placeholders.scss';
+
+.nav {
+  width: 200px;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  @include mix-add-media($var-medium-bp) {
+    margin-top: 30px;
+  }
+}
+
+.nav_link {
+  font-size: 20px;
+  position: relative;
+
+  &:after {
+    content: '';
+
+    width: 99%;
+    height: 2px;
+
+    border-radius: 2px;
+    background-color: lighten($var-text-color, 15%);
+
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in;
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  @extend %link;
+  @include mix-add-media($var-large-bp) {
+    font-size: 18px;
+  }
+}

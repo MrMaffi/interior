@@ -1,0 +1,16 @@
+@use '../base-lib' as *;
+
+.title {
+  font: {
+    size: 60px;
+    weight: 700;
+  }
+
+  .char {
+    display: inline-block;
+  }
+
+  @include mix-add-media($var-large-bp) {
+    font-size: 45px;
+  }
+}

@@ -1,0 +1,32 @@
+@use 'base-lib' as *;
+@use 'base/fonts.scss';
+@use 'blocks/header.scss';
+@use 'blocks/content.scss';
+@use 'blocks/nav.scss';
+@use 'blocks/transiton.scss';
+@use 'blocks/intro.scss';
+@use 'blocks/title.scss';
+@use 'blocks/cta.scss';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $var-bg;
+
+  color: $var-text-color;
+  font: {
+    size: 22px;
+    weight: 400;
+    family: 'Montserrat', sans-serif;
+  }
+
+  @include mix-add-media($var-large-bp) {
+    font-size: 20px;
+  }
+}

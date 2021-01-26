@@ -1,0 +1,9 @@
+@use '../base-lib' as *;
+
+.header {
+  margin-top: 60px;
+
+  @include mix-add-media($var-medium-bp) {
+    margin-top: 30px;
+  }
+}

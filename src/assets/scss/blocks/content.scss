@@ -1,0 +1,27 @@
+@use '../base-lib' as *;
+
+.content {
+  margin: 0 auto;
+  max-width: 1140px;
+
+  @include mix-add-media($var-extra-large-bp) {
+    max-width: 960px;
+  }
+
+  @include mix-add-media($var-large-bp) {
+    max-width: 720px;
+  }
+
+  @include mix-add-media($var-medium-bp) {
+    max-width: 540px;
+  }
+
+  @include mix-add-media($var-small-bp) {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  @include mix-add-media($var-extra-small-bp) {
+    padding: 0 10px;
+  }
+}

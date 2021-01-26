@@ -1,0 +1,28 @@
+@use '../base-lib' as *;
+@use '../base/placeholders.scss';
+
+.cta {
+  display: block;
+
+  width: 450px;
+  padding: 25px;
+  margin-top: 60px;
+
+  background-color: #fff;
+
+  @extend %link;
+
+  @include mix-add-media($var-large-bp) {
+    display: inline-block;
+
+    width: auto;
+    padding: 0;
+    margin-top: 40px;
+
+    background: none;
+  }
+
+  @include mix-add-media($var-medium-bp) {
+    margin-bottom: 60px;
+  }
+}
